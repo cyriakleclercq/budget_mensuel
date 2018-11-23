@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="budget.css">
+
+</head>
+<body>
+    <header class="container-fluid pt-5 pb-5">
+        <h1 class="text-center"> Calculez votre budget mensuel</h1>
+    </header>
+
+    <section class="container mt-5">
+
+        <div class="row pt-5 pb-5 text-center">
+            <div class="col-sm-3">
+                <h2> Calcul des recettes </h2>
+
+            </div>
+
+            <div class="col-sm-3">
+                <h2> Calcul des dépenses </h2>
+
+            </div>
+
+            <div class="col-sm-3">
+                <h2> Epargne </h2>
+
+            </div>
+
+            <div class="col-sm-3">
+                <h2 > Resultat </h2>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="container mt-3">
+
+        <div class="row pt-5 pb-5 text-center">
+
+            <div class="col-sm-3">
+                <input class="mb-2"  type="text" id="txt_recettes">
+                <input type="text" id="recettes">
+                <p id="txt_rec" ></p>
+                <p id="rec"> </p>
+            </div>
+
+            <div class="col-sm-3">
+                <input class="mb-2" type="text" id="txt_depenses">
+                <input type="text" id="depenses">
+                <p id="txt_dep"> </p>
+                <p id="dep"> </p>
+            </div>
+
+            <div class="col-sm-3">
+                <input type="text" id="epargne">
+                <p id="epa"> </p>
+            </div>
+
+            <div class="col-sm-3">
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="container">
+
+        <div class="row pt-5 pb-5 text-center">
+            <div class="col-sm-3">
+                <p id="resultat_recettes"> </p>
+
+            </div>
+
+            <div class="col-sm-3">
+                <p id="resultat_depenses"> </p>
+
+            </div>
+
+            <div class="col-sm-3">
+                <p id="resultat_epargne"> </p>
+
+            </div>
+
+            <div class="col-sm-3">
+                <p id="resultat"> </p>
+
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="container-fluid mt-5 mb-5">
+
+        <button type="submit" id="ajout"> push </button>
+        <button type="submit" id="reset"> reset</button>
+    </footer>
+
+
+    <script src="budget.js"></script>
+</body>
+</html>
