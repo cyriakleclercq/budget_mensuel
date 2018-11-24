@@ -7,18 +7,14 @@ var epargne = document.getElementById("epargne");
 
 var resultat_recettes = document.getElementById("resultat_recettes");
 var resultat_depenses = document.getElementById("resultat_depenses");
-var rsultat = document.getElementById("resultat");
+var resultat_epargne = document.getElementById("resultat_epargne");
+var resultat = document.getElementById("resultat");
 
 var nom_recettes = document.getElementById("txt_rec");
 var nom_depenses = document.getElementById("txt_dep");
 
-var affichage_recettes = document.getElementById("rec");
-var affichage_depenses = document.getElementById("dep");
 var affichage_epargne = document.getElementById("epa");
 
-var tableau_recettes = [];
-var tableau_depenses = [];
-var tableau_epargne = [];
 
 recettes.value = 0;
 depenses.value = 0;
@@ -30,31 +26,99 @@ var c = 0;
 var d = "";
 var e = "";
 
+
+var add = 0;
+var bdd = 0;
+var cdd = 0;
+
+function blanc() {
+
+    recettes.value = "0";
+    depenses.value = "0";
+    epargne.value = "0";
+
+    txt_recettes.value = "";
+    txt_depenses.value = "";
+}
+
+function reset() {
+
+    recettes.value = "0";
+    depenses.value = "0";
+    epargne.value = "0";
+
+    add = 0;
+    bdd = 0;
+    cdd = 0;
+
+    txt_recettes.value = "";
+    txt_depenses.value = "";
+
+    nom_recettes.innerHTML = "";
+    nom_depenses.innerHTML = "";
+    affichage_epargne.innerHTML = "";
+    resultat_recettes.innerHTML = "";
+    resultat_depenses.innerHTML = "";
+    resultat_epargne.innerHTML = "";
+    resultat.innerHTML = "";
+}
+
+
+
+
 document.getElementById("ajout").addEventListener("click", function () {
 
-    a = recettes.value;
-    b = depenses.value;
-    c = epargne.value;
+    a = Number(recettes.value);
+    b = Number(depenses.value);
+    c = Number(epargne.value);
+
+
 
     d = txt_recettes.value;
     e = txt_depenses.value;
 
-    affichage_recettes.innerHTML = a;
-    affichage_depenses.innerHTML = b;
-    affichage_epargne.innerHTML = c;
+    add = add + a;
+    add = Math.round(add*100)/100;
 
-    nom_recettes.innerHTML = d +" "+ ":";
-    nom_depenses.innerHTML = e +" "+ ":";
+    bdd = bdd + b;
+    bdd = Math.round(bdd*100)/100;
 
-
-    tableau_recettes.push(a);
-    console.log(tableau_recettes);
-
-    tableau_depenses.push(b);
-    console.log(tableau_depenses);
-
-    tableau_epargne.push(c);
-    console.log(tableau_epargne);
+    cdd = add - bdd + c;
+    cdd = Math.round(cdd*100)/100;
 
 
+    nom_recettes.innerHTML += d +" "+ ":" + " " + a + " "+ "€" + "<br>";
+    nom_depenses.innerHTML += e +" "+ ":" + " " + b + " "+ "€" + "<br>";
+    affichage_epargne.innerHTML = c + " "+ "€" + "<br>";
+
+    resultat_recettes.innerHTML = add + " " + "€";
+    resultat_depenses.innerHTML = bdd + " " + "€";
+    resultat_epargne.innerHTML = c + " " + "€";
+    resultat.innerHTML = cdd + " " + "€";
+
+blanc();
+
+    if (cdd > 0) {
+        document.getElementById("bravo").innerHTML = "votre budget est positif";
+        document.getElementById("bravo").style.color = "blue"
+
+    }
+
+    if (cdd == 0) {
+
+        document.getElementById("bravo").innerHTML = "votre budget est nul";
+        document.getElementById("bravo").style.color = "grey"
+    }
+
+    if (cdd < 0) {
+
+        document.getElementById("bravo").innerHTML = "votre budget est négatif";
+        document.getElementById("bravo").style.color = "red"
+    }
+});
+
+
+
+document.getElementById("reset").addEventListener("click", function () {
+    reset();
 });

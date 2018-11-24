@@ -1,11 +1,18 @@
+body {
+    background: #8B87FF;
+    color: whitesmoke;
+}
 header {
+
     border: solid;
     border-radius: 30px;
+    background:#B0B9FF;
 }
 
 section {
     border: solid;
     border-radius: 30px;
+    background: #9776FF;
 
 }
 
@@ -15,7 +22,8 @@ footer {
     display: flex;
     justify-content: space-around;
     border: solid;
-    border-radius: 30px
+    border-radius: 30px;
+    background:#B0B9FF;
 ;
 }
 
