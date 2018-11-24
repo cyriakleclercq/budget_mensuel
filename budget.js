@@ -10,7 +10,7 @@ var epargne = document.getElementById("epargne");
 var resultat_recettes = document.getElementById("resultat_recettes");
 var resultat_depenses = document.getElementById("resultat_depenses");
 var resultat_epargne = document.getElementById("resultat_epargne");
-var resultat = document.getElementById("resultat");
+var resultat = document.getElementById("reste");
 
 var nom_recettes = document.getElementById("txt_rec");
 var nom_depenses = document.getElementById("txt_dep");
@@ -96,7 +96,7 @@ document.getElementById("ajout").addEventListener("click", function () {
     bdd = bdd + b;
     bdd = Math.round(bdd*100)/100;
 
-    cdd = add - bdd + c;
+    cdd = add - bdd - c;
     cdd = Math.round(cdd*100)/100;
 
 
