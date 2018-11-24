@@ -1,4 +1,6 @@
 
+//initialisation des variables
+
 var txt_recettes = document.getElementById("txt_recettes");
 var recettes = document.getElementById("recettes");
 var txt_depenses =  document.getElementById("txt_depenses");
@@ -15,10 +17,13 @@ var nom_depenses = document.getElementById("txt_dep");
 
 var affichage_epargne = document.getElementById("epa");
 
+// mise à 0 des inputs
 
 recettes.value = 0;
 depenses.value = 0;
 epargne.value = 0;
+
+// initialisation des variables d'entrée
 
 var a = 0;
 var b = 0;
@@ -26,10 +31,13 @@ var c = 0;
 var d = "";
 var e = "";
 
+// initialisation des variables de calcul
 
 var add = 0;
 var bdd = 0;
 var cdd = 0;
+
+// vide des inputs
 
 function blanc() {
 
@@ -40,6 +48,8 @@ function blanc() {
     txt_recettes.value = "";
     txt_depenses.value = "";
 }
+
+//reset de toutes les variables
 
 function reset() {
 
@@ -64,9 +74,10 @@ function reset() {
 }
 
 
-
+// mise en action des opérations
 
 document.getElementById("ajout").addEventListener("click", function () {
+
 
     a = Number(recettes.value);
     b = Number(depenses.value);
@@ -76,6 +87,8 @@ document.getElementById("ajout").addEventListener("click", function () {
 
     d = txt_recettes.value;
     e = txt_depenses.value;
+
+// arrondit les valeurs a 2 chiffres apres la virgule
 
     add = add + a;
     add = Math.round(add*100)/100;
@@ -87,6 +100,8 @@ document.getElementById("ajout").addEventListener("click", function () {
     cdd = Math.round(cdd*100)/100;
 
 
+    // affichage des valeurs
+
     nom_recettes.innerHTML += d +" "+ ":" + " " + a + " "+ "€" + "<br>";
     nom_depenses.innerHTML += e +" "+ ":" + " " + b + " "+ "€" + "<br>";
     affichage_epargne.innerHTML = c + " "+ "€" + "<br>";
@@ -97,6 +112,8 @@ document.getElementById("ajout").addEventListener("click", function () {
     resultat.innerHTML = cdd + " " + "€";
 
 blanc();
+
+// conditions d'affichage de l'état du budget
 
     if (cdd > 0) {
         document.getElementById("bravo").innerHTML = "votre budget est positif";
@@ -118,6 +135,8 @@ blanc();
 });
 
 
+
+// bouton reset
 
 document.getElementById("reset").addEventListener("click", function () {
     reset();
