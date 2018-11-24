@@ -12,29 +12,165 @@
         <h1 class="text-center"> Calculez votre budget mensuel</h1>
     </header>
 
+    <section class="container pt-5 pb-5 mt-5">
+        <h2 class="text-center pt-2 pb-5"> Vos charges fixes </h2>
+        <div class="ty">
+
+            <div class="row">
+
+                <div class="col-6">
+                    <span>
+                        <p> Loyer et charges : </p>
+                        <input type="number" id="ch1">
+                    </span>
+                </div>
+
+                <div class="col-6">
+                    <span>
+                        <p> Crédits : </p>
+                        <input type="number" id="ch2">
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="ty">
+
+            <div class="row">
+
+                <div class="col-6">
+                    <span>
+                        <p> Eau / electricite / gaz : </p>
+                        <input type="number" id="ch3">
+                    </span>
+                </div>
+
+                <div class="col-6">
+                    <span>
+                        <p> Téléphone / internet : </p>
+                        <input type="number" id="ch4">
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="ty">
+
+            <div class="row">
+
+                <div class="col-6">
+                    <span>
+                        <p> Assurance habitation : </p>
+                        <input type="number" id="ch5">
+                    </span>
+                </div>
+                <div class="col-6">
+                    <span>
+                        <p> Assurance véhicule : </p>
+                        <input type="number" id="ch6">
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="ty">
+
+            <div class="row">
+
+                <div class="col-6">
+                    <span>
+                        <p> Mutuelle santé : </p>
+                        <input type="number" id="ch7">
+                    </span>
+                </div>
+                <div class="col-6">
+                    <span>
+                        <p> Frais de garde : </p>
+                        <input type="number" id="ch8">
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="ty">
+
+            <div class="row">
+
+                <div class="col-6">
+                    <span>
+                        <p> Impôts sur le revenue : </p>
+                        <input type="number" id="ch9">
+                    </span>
+                </div>
+                <div class="col-6">
+                    <span>
+                        <p> Impôts locaux : </p>
+                        <input type="number" id="ch10">
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="ty pt-5 pb-5 mt-5" id="s">
+            <span> Montant total de vos charges fixes :</span>
+            <span id="resultat_charges"></span>
+        </div>
+
+
+
+
+    </section>
+
     <section class="container mt-5">
 
         <div class="row pt-5 pb-5 text-center">
-            <div class="col-sm-3">
-                <h2> Calcul des recettes </h2>
 
+            <div class="col-sm-3">
+                <h3> Recettes :</h3>
             </div>
 
             <div class="col-sm-3">
-                <h2> Calcul des dépenses </h2>
-
+                <h3> Dépenses occasionnelles :</h3>
             </div>
 
             <div class="col-sm-3">
-                <h2> Epargne </h2>
-
+                <h3> Epargne :</h3>
             </div>
 
             <div class="col-sm-3">
-                <h2 > Reste </h2>
-
+                <h3> Reste :</h3>
             </div>
         </div>
+
+        <div class="row pt-5 pb-5 text-center">
+
+            <div class="col-sm-3">
+
+                <input class="mb-2"  type="text" id="txt_recettes">
+                <input type="number" id="recettes"> <br>
+                <span id="txt_rec" ></span>
+
+            </div>
+
+            <div class="col-sm-3">
+                <input class="mb-2" type="text" id="txt_depenses">
+                <input type="number" id="depenses"> <br>
+                <span id="txt_dep"> </span>
+
+            </div>
+
+            <div class="col-sm-3">
+                <input type="number" id="epargne">
+                <p id="epa"> </p>
+            </div>
+
+            <div class="col-sm-3">
+                <span id="resu_ajout"> </span>
+            </div>
+
+
+        </div>
+
 
     </section>
 
@@ -43,30 +179,31 @@
         <div class="row pt-5 pb-5 text-center">
 
             <div class="col-sm-3">
-                <input class="mb-2"  type="text" id="txt_recettes">
-                <input type="text" id="recettes"> <br>
-                <span id="txt_rec" ></span>
+
+                <h2> Calcul des recettes </h2>
 
             </div>
 
             <div class="col-sm-3">
-                <input class="mb-2" type="text" id="txt_depenses">
-                <input type="text" id="depenses"> <br>
-                <span id="txt_dep"> </span>
+
+                <h2> Calcul des dépenses </h2>
 
             </div>
 
             <div class="col-sm-3">
-                <input type="text" id="epargne">
-                <p id="epa"> </p>
+
+                <h2> Calcul de l'epargne </h2>
+
             </div>
 
             <div class="col-sm-3">
 
+                <h2 > Calcul du reste </h2>
+
             </div>
-
-
         </div>
+
+
     </section>
 
     <section class="container  mt-3">

@@ -30,3 +30,12 @@ footer {
 #epargne {
     margin-top: 15%;
 }
+
+.ty {
+    display: flex;
+    justify-content: space-around;
+}
+
+#s {
+    font-size: 25px;
+}
